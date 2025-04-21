@@ -966,10 +966,10 @@ class SpannerGraphSchema(object):
                 },
                 "Possible edges per label": {
                     label: [
-                        "Edges from {} nodes to {} nodes".format(
-                            edge.source.node_name, edge.target.node_name
-                        )
+                        f"(:{source_node_label}) -[:{label}]-> (:{target_node_label})"
                         for edge in edges
+                        for source_node_label in self.get_node_schema(edge.source.node_name).labels
+                        for target_node_label in self.get_node_schema(edge.target.node_name).labels
                     ]
                     for label, edges in edges_per_label.items()
                 },

@@ -233,7 +233,7 @@ If the provided information is empty, say that you don't know the answer.
 You are given the following information:
 - `Question`: the natural language question from the user
 - `Graph Schema`: contains the schema of the graph database
-- `Graph Query`: A Spanner Graph GQL query equivalent of the question from the user used to extract context from the graph database
+- `Graph Query`: A Spanner Graph GQL query from the user used to extract context from the graph database
 - `Context`: The response from the graph database as context
 Information:
 Question: {question}
